@@ -19,6 +19,7 @@ $ hiroshi.asakawa
 
 ### 下記は自分の環境に応じて任意の値に変更すること
 slackAPIトークン：$token
+
 通知対象チャンネル：$post_channel_name
 
 ### slackApp側で許可が必要になるpermission一覧
@@ -39,6 +40,3 @@ View emoji reactions in the user’s channels and conversations and their associ
 
 #### users:read
 View people in the workspace
-
-### 備考
-記号の使用率には人間の無意識が反映されているかもしれない。
