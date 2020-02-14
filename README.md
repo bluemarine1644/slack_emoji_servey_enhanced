@@ -26,19 +26,19 @@ slackAPIトークン：$token
 View messages and other content in the user’s public channels
 
 #### channels:read
-(View basic information about public channels in the workspace)
+View basic information about public channels in the workspace
 
 #### chat:write
-(Send messages on the user’s behalf)
+Send messages on the user’s behalf
 
 #### emoji:read
-(View custom emoji in the workspace)
+View custom emoji in the workspace
 
 #### reactions:read
-(View emoji reactions in the user’s channels and conversations and their associated content)
+View emoji reactions in the user’s channels and conversations and their associated content
 
 #### users:read
-(View people in the workspace)
+View people in the workspace
 
 ### 備考
 記号の使用率には人間の無意識が反映されているかもしれない。
