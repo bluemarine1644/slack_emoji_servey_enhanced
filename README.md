@@ -22,22 +22,22 @@ slackAPIトークン：$token
 通知対象チャンネル：$post_channel_name
 
 ### slackApp側で許可が必要になるpermission一覧
-channels:history
+#### channels:history
 View messages and other content in the user’s public channels
 
-channels:read
+#### channels:read
 View basic information about public channels in the workspace
 
-chat:write
+#### chat:write
 Send messages on the user’s behalf
 
-emoji:read
+#### emoji:read
 View custom emoji in the workspace
 
-reactions:read
+#### reactions:read
 View emoji reactions in the user’s channels and conversations and their associated content
 
-users:read
+#### users:read
 View people in the workspace
 
 ### 備考
