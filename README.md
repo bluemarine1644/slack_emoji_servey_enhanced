@@ -2,19 +2,21 @@
 絵文字使用率調査スクリプト
 
 ### スクリプト実行コマンド
-$ ruby emoji_ranking_bot.rb
+$ ruby servey_emoji_ranking_bot.rb
 
-### チャンネル名を入力
-$ hoge
+### user or channnelを入力
+$ user
 
-#### チャンネル名が存在しない場合
+### user名を入力
+$ hiroshi.asakawa
+
+#### 存在しない場合
 終了
 
-#### チャンネル名が存在する場合
-調査対象チャンネルにおける直近1000メッセージ分の反応データを取得し、
+#### 存在する場合
+調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
 絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
 
 ### 下記は自分の環境に応じて任意の値に変更すること
-slackAPIトークン：token
-調査対象チャンネル：channel_name
-通知対象チャンネル：post_channel_name
+slackAPIトークン：$token
+通知対象チャンネル：$post_channel_name
