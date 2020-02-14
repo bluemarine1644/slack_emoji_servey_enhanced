@@ -3,10 +3,11 @@ require 'uri'
 require "json"
 require 'pp'
 
+# 任意の値に変更してください
 $token            = "your_token" # slackAPI用に取得したtoken
+$post_channel_name = "post_channnel_name" # 通知対象チャンネル名
 $count            = 1000 #slackAPIの取得可能数の限界値。timestampをずらして1000件ずつ取得すれば全件取得できるらしい
 $target_name      = nil
-$post_channel_name = "post_channnel_name" # 通知対象チャンネル名
 
 def get_reactions_from_user
   p '絵文字使用率を調べたいユーザー名を入力してください。'
