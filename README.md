@@ -23,7 +23,7 @@ slackAPIトークン：$token
 通知対象チャンネル：$post_channel_name
 
 ### slackApp側で許可が必要になるpermission一覧
-#### - channels:history
+#### channels:history
 View messages and other content in the user’s public channels
 
 #### channels:read
