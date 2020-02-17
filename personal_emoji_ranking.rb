@@ -3,11 +3,12 @@ require 'uri'
 require "json"
 require 'pp'
 
-# slackAPI用に取得したtoken
-token = "your_token"
+require 'dotenv'
+Dotenv.load
 
-# 通知対象チャンネル名
-post_channel_name = "post_channel_name"
+# .envに定義して利用してください
+token             = ENV['SLACK_API_TOKEN'] # slackAPI用に取得したtoken
+post_channel_name = ENV['POST_CHANNNEL_NAME'] # 通知対象チャンネル名
 
 # SlackAPI：users.list
 res     = Net::HTTP.get(URI.parse("https://slack.com/api/users.list?token=#{token}&pretty=1"))
