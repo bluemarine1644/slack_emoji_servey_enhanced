@@ -28,7 +28,7 @@ def get_reactions_from_user
   end
 
   if member_lists[$target_name.to_sym].nil?
-    puts "該当ユーザーが存在しません"
+    puts "#{$target_name}は存在しません"
     return
   end
 
@@ -72,7 +72,7 @@ def get_reactions_from_channnel
   end
 
   if channel_lists[$target_name.to_sym].nil?
-    puts "チャンネル名が存在しません"
+    puts "#{$target_name}は存在しません"
     return
   end
 
