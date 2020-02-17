@@ -18,6 +18,7 @@ $ hiroshi.asakawa
 
 ### 下記はdotenvを導入してるので、.envファイルを作成して追記してください
 SLACK_API_TOKEN = your_token
+
 POST_CHANNNEL_NAME = channel_name
 
 ### slackApp側で許可が必要になるpermission一覧
