@@ -10,17 +10,15 @@ $ user
 ### user名を入力
 $ hiroshi.asakawa
 
-#### 存在しない場合
-終了
+#### 存在しない場合はプログラム終了
 
 #### 存在する場合
 調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
 絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
 
-### 下記は自分の環境に応じて任意の値に変更すること
-slackAPIトークン：$token
-
-通知対象チャンネル：$post_channel_name
+### 下記はdotenvを導入してるので、.envファイルを作成して追記してください
+SLACK_API_TOKEN = your_token
+POST_CHANNNEL_NAME = channel_name
 
 ### slackApp側で許可が必要になるpermission一覧
 #### channels:history
