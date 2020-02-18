@@ -8,22 +8,22 @@
 - スクリプトを実行
 
 ### slackApp permission list
-#### channels:history
-View messages and other content in the user’s public channels
+#### channels:history チャンネルの履歴データを取得するため
+> View messages and other content in the user’s public channels
 
-#### channels:read
+#### channels:read　チャンネル名とチャンネルIDを取得するため
 View basic information about public channels in the workspace
 
-#### chat:write
+#### chat:write　チャンネルに投稿するため
 Send messages on the user’s behalf
 
-#### emoji:read
+#### emoji:read　カスタム絵文字を読み取るため
 View custom emoji in the workspace
 
-#### reactions:read
+#### reactions:read　反応データを取得するため
 View emoji reactions in the user’s channels and conversations and their associated content
 
-#### users:read
+#### users:read　ユーザー名とユーザーIDを取得するため
 View people in the workspace
 
 ### Settings
