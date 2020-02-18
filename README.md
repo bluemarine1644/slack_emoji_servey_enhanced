@@ -31,14 +31,14 @@ dotenvを導入してるので、.envファイルを作成して各々の環境�
 
 SLACK_API_TOKEN = your_token
 
-POST_CHANNNEL_NAME = channel_name
+POST_CHANNEL_NAME = channel_name
 
 ### Run
 $ ruby servey_emoji_ranking_bot.rb
 
-### Please enter user or channnel
+### Please enter user or channel
 ```
-"調べたいのはどっち？入力してね　user or channnel　"
+"調べたいのはどっち？入力してね　user or channel　"
 $ user
 ```
 
@@ -48,10 +48,10 @@ $ user
 $ hiroshi.asakawa
 ```
 
-### Please enter user or channnel
+### Please enter user or channel
 ```
-"調べたいのはどっち？入力してね　user or channnel　"
-$ channnel
+"調べたいのはどっち？入力してね　user or channel　"
+$ channel
 ```
 
 ### Please enter channel_name
