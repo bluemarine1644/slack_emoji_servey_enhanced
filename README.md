@@ -12,19 +12,19 @@
 > View messages and other content in the user’s public channels
 
 #### channels:read：チャンネル名とチャンネルIDを取得するため
-View basic information about public channels in the workspace
+> View basic information about public channels in the workspace
 
 #### chat:write：チャンネルに投稿するため
-Send messages on the user’s behalf
+> Send messages on the user’s behalf
 
 #### emoji:read：カスタム絵文字を読み取るため
-View custom emoji in the workspace
+> View custom emoji in the workspace
 
 #### reactions:read：反応データを取得するため
-View emoji reactions in the user’s channels and conversations and their associated content
+> View emoji reactions in the user’s channels and conversations and their associated content
 
 #### users:read：ユーザー名とユーザーIDを取得するため
-View people in the workspace
+> View people in the workspace
 
 ### Settings
 dotenvを導入してるので、.envファイルを作成して各々の環境に応じた値を追記してください
