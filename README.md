@@ -27,6 +27,8 @@ $ ruby servey_emoji_ranking_bot.rb
 ```
 
 ### slackApp permission list
+[slackAPImethod公式リファレンス](https://api.slack.com/methods)
+
 - channels:history：チャンネルの履歴データを取得するため
 > View messages and other content in the user’s public channels
 
