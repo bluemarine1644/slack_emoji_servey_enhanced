@@ -38,19 +38,19 @@ $ ruby servey_emoji_ranking_bot.rb
 
 ### Please enter user or channel
 ```
-"調べたいのはどっち？入力してね　user or channel"
+調べたいのはどっち？入力してね　user or channel
 $ user
 ```
 
 ### Please enter user_name
 ```
-"絵文字使用率を調べたいユーザー名を入力してください。"
+絵文字使用率を調べたいユーザー名を入力してください。
 $ hiroshi.asakawa
 ```
 
 ### Please enter channel_name
 ```
-"絵文字使用率を調べたいチャンネル名を入力してください。"
+絵文字使用率を調べたいチャンネル名を入力してください。
 $ _asakawa
 ```
 
