@@ -12,7 +12,7 @@ slack絵文字使用率調査スクリプト(ruby)
 
 ### Usage
 
-インスコ
+ダウンロード
 ```
 $ git clone git@github.com:H-Asakawa/slack_emoji_servey.git
 ```
