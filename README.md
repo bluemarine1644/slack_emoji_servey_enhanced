@@ -1,5 +1,5 @@
 # slack_emoji_servey
-slack絵文字使用率調査スクリプト(ruby)
+slackの対象ユーザー・チャンネルの絵文字使用率ランキング1〜10位を投稿するスクリプト(ruby)
 
 ### Requirement
 
