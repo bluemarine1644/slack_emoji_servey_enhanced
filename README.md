@@ -37,18 +37,33 @@ POST_CHANNNEL_NAME = channel_name
 $ ruby servey_emoji_ranking_bot.rb
 
 ### Please enter user or channnel
+```
+"調べたいのはどっち？入力してね　user or channnel　"
 $ user
+```
 
 ### Please enter user_name
+```
+"絵文字使用率を調べたいユーザー名を入力してください。"
 $ hiroshi.asakawa
+```
 
 ### Please enter user or channnel
+```
+"調べたいのはどっち？入力してね　user or channnel　"
 $ channnel
+```
 
 ### Please enter channel_name
+```
+"絵文字使用率を調べたいチャンネル名を入力してください。"
 $ _asakawa
+```
 
 ### Result
+
+
+
 調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
 絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
 
