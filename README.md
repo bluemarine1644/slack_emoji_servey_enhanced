@@ -19,7 +19,7 @@ $ git clone git@github.com:H-Asakawa/slack_emoji_servey.git
 設定
 ```
 $ cd slack_emoji_servey
-$ vim .env //tokenとpost_channel_nameを記入
+$ vim .env //slackAPItokenとpost_channel_nameを記入
 ```
 実行
 ```
