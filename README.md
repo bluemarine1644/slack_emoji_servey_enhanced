@@ -1,5 +1,5 @@
 # slack_emoji_servey
-絵文字使用率調査スクリプト
+絵文字使用率調査スクリプト(ruby)
 
 ### How to Use
 - slackAppを作成して適切なpermissionを付与する
