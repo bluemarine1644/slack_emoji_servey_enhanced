@@ -48,12 +48,6 @@ $ user
 $ hiroshi.asakawa
 ```
 
-### Please enter user or channel
-```
-"調べたいのはどっち？入力してね　user or channel　"
-$ channel
-```
-
 ### Please enter channel_name
 ```
 "絵文字使用率を調べたいチャンネル名を入力してください。"
