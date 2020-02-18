@@ -1,11 +1,30 @@
 # slack_emoji_servey
 slack絵文字使用率調査スクリプト(ruby)
 
+### Requirement
+- rubyの実行環境
+
 ### How to Use
 - slackAppを作成して適切なpermissionを付与する
 - slackAPIのtokenを取得する
 - .envファイルを作成してtokenの値と投稿先チャンネル名を追記
 - スクリプトを実行
+
+### Usage
+
+インスコ
+```
+$ git clone git@github.com:H-Asakawa/slack_emoji_servey.git
+```
+設定
+```
+$ cd slack_emoji_servey
+$ vim .env //tokenとpost_channel_nameを記入
+```
+実行
+```
+$ ruby servey_emoji_ranking_bot.rb 
+```
 
 ### slackApp permission list
 #### channels:history：チャンネルの履歴データを取得するため
