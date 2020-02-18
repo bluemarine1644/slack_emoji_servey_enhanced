@@ -39,11 +39,30 @@ POST_CHANNEL_NAME = channel_name
 $ ruby servey_emoji_ranking_bot.rb 
 ```
 
+### Please enter user or channel
+```
+調べたいのはどっち？入力してね　user or channel
+$ user
+```
+
+### Please enter user_name
+```
+絵文字使用率を調べたいユーザー名を入力してください。
+$ hiroshi.asakawa
+```
+
+### Please enter channel_name
+```
+絵文字使用率を調べたいチャンネル名を入力してください。
+$ _asakawa
+```
+
 ### Result
 ![image](https://user-images.githubusercontent.com/36877080/74740149-a9c7ad00-529d-11ea-88fd-def719440fd9.png)
 
 調査対象ユーザー or チャンネルにおける直近1000件の投稿を取得し、
 反応データの絵文字をcountして降順に並べ、１~10位をランキング化して通知対象チャンネルに投稿する。
+consoleにログも出る。
 
 ### slackApp permission list
 [slackAPImethod公式リファレンス](https://api.slack.com/methods)
@@ -65,24 +84,3 @@ $ ruby servey_emoji_ranking_bot.rb
 
 - users:read：ユーザー名とユーザーIDを取得するため
 > View people in the workspace
-
-### Please enter user or channel
-```
-調べたいのはどっち？入力してね　user or channel
-$ user
-```
-
-### Please enter user_name
-```
-絵文字使用率を調べたいユーザー名を入力してください。
-$ hiroshi.asakawa
-```
-
-### Please enter channel_name
-```
-絵文字使用率を調べたいチャンネル名を入力してください。
-$ _asakawa
-```
-
-
-
