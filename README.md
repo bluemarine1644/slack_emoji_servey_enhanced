@@ -2,7 +2,11 @@
 slack絵文字使用率調査スクリプト(ruby)
 
 ### Requirement
-- rubyの実行環境
+rubyの実行環境
+```
+$ ruby -v //動作確認済み
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
+```
 
 ### How to Use
 - git cloneする
