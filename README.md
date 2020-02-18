@@ -1,27 +1,13 @@
 # slack_emoji_servey
 絵文字使用率調査スクリプト
 
-### スクリプト実行コマンド
-$ ruby servey_emoji_ranking_bot.rb
+### How to Use
+- slackAppを作成して適切なpermissionを付与する
+- slackAPIのtokenを取得する
+- .envファイルを作成してtokenの値と投稿先チャンネル名を追記
+- スクリプトを実行
 
-### user or channnelを入力
-$ user
-
-### user名を入力
-$ hiroshi.asakawa
-
-#### 存在しない場合はプログラム終了
-
-#### 存在する場合
-調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
-絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
-
-### 下記はdotenvを導入してるので、.envファイルを作成して追記してください
-SLACK_API_TOKEN = your_token
-
-POST_CHANNNEL_NAME = channel_name
-
-### slackApp側で許可が必要になるpermission一覧
+### slackApp permission list
 #### channels:history
 View messages and other content in the user’s public channels
 
@@ -39,3 +25,26 @@ View emoji reactions in the user’s channels and conversations and their associ
 
 #### users:read
 View people in the workspace
+
+### Settings
+dotenvを導入してるので、.envファイルを作成して各々の環境に応じた値を追記してください
+
+SLACK_API_TOKEN = your_token
+
+POST_CHANNNEL_NAME = channel_name
+
+### Run
+$ ruby servey_emoji_ranking_bot.rb
+
+### Please enter user or channnel
+$ user
+
+### Please enter user_name
+$ hiroshi.asakawa
+
+### Result
+調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
+絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
+
+
+
