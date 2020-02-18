@@ -27,23 +27,24 @@ $ ruby servey_emoji_ranking_bot.rb
 ```
 
 ### slackApp permission list
-#### channels:history：チャンネルの履歴データを取得するため
+- channels:history：チャンネルの履歴データを取得するため
 > View messages and other content in the user’s public channels
 
-#### channels:read：チャンネル名とチャンネルIDを取得するため
+- channels:read：チャンネル名とチャンネルIDを取得するため
 > View basic information about public channels in the workspace
 
-#### chat:write：チャンネルに投稿するため
+- chat:write：チャンネルに投稿するため
 > Send messages on the user’s behalf
 
-#### emoji:read：カスタム絵文字を読み取るため
+- emoji:read：カスタム絵文字を読み取るため
 > View custom emoji in the workspace
 
-#### reactions:read：反応データを取得するため
+- reactions:read：反応データを取得するため
 > View emoji reactions in the user’s channels and conversations and their associated content
 
-#### users:read：ユーザー名とユーザーIDを取得するため
+- users:read：ユーザー名とユーザーIDを取得するため
 > View people in the workspace
+```
 
 ### Settings
 dotenvを導入してるので、.envファイルを作成して各々の環境に応じた値を追記してください
