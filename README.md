@@ -38,7 +38,7 @@ $ ruby servey_emoji_ranking_bot.rb
 
 ### Please enter user or channel
 ```
-"調べたいのはどっち？入力してね　user or channel　"
+"調べたいのはどっち？入力してね　user or channel"
 $ user
 ```
 
