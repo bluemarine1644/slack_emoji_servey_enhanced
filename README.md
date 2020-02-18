@@ -42,6 +42,12 @@ $ user
 ### Please enter user_name
 $ hiroshi.asakawa
 
+### Please enter user or channnel
+$ channnel
+
+### Please enter channel_name
+$ _asakawa
+
 ### Result
 調査対象ユーザー or チャンネルにおける直近1000件の反応データを取得し、
 絵文字使用率ランキング１~10位を算出して通知対象チャンネルに投稿する。
