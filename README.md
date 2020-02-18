@@ -5,7 +5,7 @@ slack絵文字使用率調査スクリプト(ruby)
 
 rubyの実行環境
 ```
-$ ruby -v # 動作確認バージョン
+$ ruby -v #動作確認バージョン
 ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
 ```
 
@@ -25,7 +25,7 @@ $ git clone git@github.com:H-Asakawa/slack_emoji_servey.git
 設定
 ```
 $ cd slack_emoji_servey
-$ vim .env # slackAPItokenとpost_channel_nameを記入
+$ vim .env #SLACK_API_TOKENとPOST_CHANNEL_NAMEを記入
 ```
 
 実行
