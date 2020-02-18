@@ -61,8 +61,7 @@ $ _asakawa
 ```
 
 ### Result
-
-
+![image](https://user-images.githubusercontent.com/36877080/74740149-a9c7ad00-529d-11ea-88fd-def719440fd9.png)
 
 調査対象ユーザー or チャンネルにおける直近1000件の投稿を取得し、
 反応データの絵文字をcountして降順に並べ、１~10位をランキング化して通知対象チャンネルに投稿する。
