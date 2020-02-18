@@ -5,9 +5,9 @@ slack絵文字使用率調査スクリプト(ruby)
 - rubyの実行環境
 
 ### How to Use
-- slackAppを作成して適切なpermissionを付与する
-- slackAPIのtokenを取得する
-- .envファイルを作成してtokenの値と投稿先チャンネル名を追記
+- git cloneする
+- slackAppを作成して適切なpermissionをつける
+- tokenが取得できたらenvファイルに設定
 - スクリプトを実行
 
 ### Usage
