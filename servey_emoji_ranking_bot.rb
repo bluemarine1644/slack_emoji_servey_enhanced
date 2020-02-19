@@ -7,7 +7,7 @@ Dotenv.load
 
 # .envに定義して利用してください
 $token             = ENV['SLACK_API_TOKEN'] # slackAPI用に取得したtoken
-$post_channel_name = ENV['POST_CHANNNEL_NAME'] # 通知対象チャンネル名
+$post_channel_name = ENV['POST_CHANNEL_NAME'] # 通知対象チャンネル名
 $count             = 1000 #slackAPIの取得可能数の限界値。timestampをずらして1000件ずつ取得すれば全件取得できるらしい
 $target_name       = nil
 
@@ -53,7 +53,7 @@ def get_reactions_from_user
   reactions.flatten!
 end
 
-def get_reactions_from_channnel
+def get_reactions_from_channel
   p '絵文字使用率を調べたいチャンネル名を入力してください。'
   $target_name = gets.chomp!
 
@@ -76,9 +76,11 @@ def get_reactions_from_channnel
     return
   end
 
+# 該当チャンネルのIDを取得する
   channel_id = channel_lists[$target_name.to_sym]
-  count      = 1000
-  res        = Net::HTTP.get(URI.parse("https://slack.com/api/channels.history?inclusive=true&count=#{$count}&channel=#{channel_id}&token=#{$token}"))
+
+# SlackAPI：channels.history
+  res = Net::HTTP.get(URI.parse("https://slack.com/api/channels.history?inclusive=true&count=#{$count}&channel=#{channel_id}&token=#{$token}"))
 
   hash      = JSON.parse(res)
   messages  = hash["messages"]
@@ -137,16 +139,16 @@ def post_emoji_ranking(reactions)
   end
 end
 
-p '調べたいのはどっち？入力してね　user or channnel　'
+p '調べたいのはどっち？入力してね　user or channel'
 target = gets.chomp!
 
 # reactionsを取得
 if target == "user"
   reactions = get_reactions_from_user
-elsif target == "channnel"
-  reactions = get_reactions_from_channnel
+elsif target == "channel"
+  reactions = get_reactions_from_channel
 else
-  puts "user or channnelのどっちかを入力してください"
+  puts "user or channelのどっちかを入力してください"
   return
 end
 
