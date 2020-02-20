@@ -94,17 +94,25 @@ def get_reactions_from_channel
   reactions.compact!.flatten!
 end
 
-def post_emoji_ranking(reactions)
+def post_emoji_ranking(reactions, target_type)
 #取得したreactionsをランキング化して投稿
 # あとでcount数を加算するために初期値0でハッシュを作っておく
   results = Hash.new(0)
 
-  reactions.each do |reaction|
-    name                 = reaction["name"]
-    results[name.to_sym] += reaction["count"]
+  #ユーザーを対象にした場合はcountは使用せず単に1プラスする。チャンネルを対象にした場合はcountを加算する。
+  if target_type == "user"
+    reactions.each do |reaction|
+      name                 = reaction["name"]
+      results[name.to_sym] += 1
+    end
+  else
+    reactions.each do |reaction|
+      name                 = reaction["name"]
+      results[name.to_sym] += reaction["count"]
+    end
   end
 
-# コンソール結果表示用
+  # コンソール結果表示用
   puts "#{$target_name}の絵文字使用率ランキング1〜10位"
   result_data = []
   results.sort_by { |_, v| -v }.to_a.first(10).each do |result|
@@ -112,13 +120,13 @@ def post_emoji_ranking(reactions)
     puts "#{result[0].to_s.rjust(30, " ")}:#{result[1]}回"
   end
 
-# 該当チャンネルに投稿をするAPIを叩く
+  # 該当チャンネルに投稿をするAPIを叩く
   post_api_url = "https://slack.com/api/chat.postMessage"
 
   uri = URI.parse(post_api_url)
   req = Net::HTTP::Post.new(uri)
 
-# 後でjoinして配列内の文字列を全て結合する
+  # 後でjoinして配列内の文字列を全て結合する
   contents = ["#{$target_name}の絵文字使用率ランキング1〜10位\n"]
   result_data.each.with_index(1) do |data, n|
     contents << "#{n}位　:#{data[0]}:は#{data[1]}回です\n"
@@ -152,4 +160,4 @@ else
   return
 end
 
-post_emoji_ranking(reactions)
+post_emoji_ranking(reactions, target)
