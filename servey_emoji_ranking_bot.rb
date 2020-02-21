@@ -6,17 +6,17 @@ require 'dotenv'
 Dotenv.load
 
 # .envに定義して利用してください
-TOKEN             = ENV['SLACK_API_TOKEN'] # slackAPI用に取得したtoken
+SLACK_API_TOKEN   = ENV['SLACK_API_TOKEN'] # slackAPI用に取得したtoken
 POST_CHANNEL_NAME = ENV['POST_CHANNEL_NAME'] # 通知対象チャンネル名
 COUNT             = 1000 #slackAPIの取得可能数の限界値。timestampをずらして1000件ずつ取得すれば全件取得できるらしい
-$target_name       = nil
+$target_name      = nil
 
 def get_reactions_from_user
   p '絵文字使用率を調べたいユーザー名を入力してください。'
   $target_name = gets.chomp!
 
 # SlackAPI：users.list
-  res     = Net::HTTP.get(URI.parse("https://slack.com/api/users.list?token=#{TOKEN}&pretty=1"))
+  res     = Net::HTTP.get(URI.parse("https://slack.com/api/users.list?token=#{SLACK_API_TOKEN}&pretty=1"))
   hash    = JSON.parse(res)
   members = hash["members"]
 
@@ -36,7 +36,7 @@ def get_reactions_from_user
   user_id = member_lists[$target_name.to_sym]
 
 # SlackAPI：reaction.list
-  res = Net::HTTP.get(URI.parse("https://slack.com/api/reactions.list?token=#{TOKEN}&count=#{COUNT}&user=#{user_id}&pretty=1"))
+  res = Net::HTTP.get(URI.parse("https://slack.com/api/reactions.list?token=#{SLACK_API_TOKEN}&count=#{COUNT}&user=#{user_id}&pretty=1"))
 
   hash  = JSON.parse(res)
   items = hash["items"]
@@ -58,7 +58,7 @@ def get_reactions_from_channel
   $target_name = gets.chomp!
 
 # チャンネルリスト取得
-  res      = Net::HTTP.get(URI.parse("https://slack.com/api/channels.list?token=#{TOKEN}"))
+  res      = Net::HTTP.get(URI.parse("https://slack.com/api/channels.list?token=#{SLACK_API_TOKEN}"))
   hash     = JSON.parse(res)
   channels = hash["channels"]
 
@@ -80,7 +80,7 @@ def get_reactions_from_channel
   channel_id = channel_lists[$target_name.to_sym]
 
 # SlackAPI：channels.history
-  res = Net::HTTP.get(URI.parse("https://slack.com/api/channels.history?inclusive=true&count=#{COUNT}&channel=#{channel_id}&token=#{TOKEN}"))
+  res = Net::HTTP.get(URI.parse("https://slack.com/api/channels.history?inclusive=true&count=#{COUNT}&channel=#{channel_id}&token=#{SLACK_API_TOKEN}"))
 
   hash      = JSON.parse(res)
   messages  = hash["messages"]
@@ -132,7 +132,7 @@ def post_emoji_ranking(reactions, target_type)
     contents << "#{n}位　:#{data[0]}:は#{data[1]}回です\n"
   end
 
-  post_data = { token:   "#{TOKEN}",
+  post_data = { token:   "#{SLACK_API_TOKEN}",
                 channel: "#{POST_CHANNEL_NAME}",
                 text:    contents.join, }
 
