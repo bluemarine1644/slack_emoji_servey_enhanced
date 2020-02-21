@@ -115,7 +115,7 @@ def post_emoji_ranking(reactions, target_type)
   # コンソール結果表示用
   puts "#{$target_name}の絵文字使用率ランキング1〜10位"
   result_data = []
-  results.sort_by { |_, v| -v }.to_a.first(10).each do |result|
+  results.sort_by { |_, v| -v }.first(10).each do |result|
     result_data << result
     puts "#{result[0].to_s.rjust(30, " ")}:#{result[1]}回"
   end
