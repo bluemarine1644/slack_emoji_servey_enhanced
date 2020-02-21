@@ -50,7 +50,7 @@ def get_reactions_from_user
   messages.each do |message|
     reactions << message["reactions"]
   end
-  reactions.flatten!
+  reactions.flatten
 end
 
 def get_reactions_from_channel
@@ -91,7 +91,7 @@ def get_reactions_from_channel
   end
 
 # 整形
-  reactions.compact!.flatten!
+  reactions.compact.flatten
 end
 
 def post_emoji_ranking(reactions, target_type)
