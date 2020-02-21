@@ -142,7 +142,7 @@ def post_emoji_ranking(reactions, target_type)
     use_ssl: uri.scheme == "https"
   }
 
-  response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
     http.request(req)
   end
 end
