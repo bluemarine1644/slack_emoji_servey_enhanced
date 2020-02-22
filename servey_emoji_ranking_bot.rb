@@ -12,7 +12,7 @@ COUNT             = 1000 #slackAPIの取得可能数の限界値。timestampを�
 $target_name      = nil
 
 def get_reactions_from_user
-  p '絵文字使用率を調べたいユーザー名を入力してください。'
+  p '絵文字使用回数を調べたいユーザー名を入力してください。'
   $target_name = gets.chomp!
 
 # SlackAPI：users.list
@@ -54,7 +54,7 @@ def get_reactions_from_user
 end
 
 def get_reactions_from_channel
-  p '絵文字使用率を調べたいチャンネル名を入力してください。'
+  p '絵文字使用回数を調べたいチャンネル名を入力してください。'
   $target_name = gets.chomp!
 
 # チャンネルリスト取得
@@ -113,7 +113,7 @@ def post_emoji_ranking(reactions, target_type)
   end
 
   # コンソール結果表示用
-  puts "#{$target_name}の絵文字使用率ランキング1〜10位"
+  puts "#{$target_name}の絵文字使用回数ランキング1〜10位"
   result_data = []
   results.sort_by { |_, v| -v }.first(10).each do |result|
     result_data << result
@@ -127,7 +127,7 @@ def post_emoji_ranking(reactions, target_type)
   req = Net::HTTP::Post.new(uri)
 
   # 後でjoinして配列内の文字列を全て結合する
-  contents = ["#{$target_name}の絵文字使用率ランキング1〜10位\n"]
+  contents = ["#{$target_name}の絵文字使用回数ランキング1〜10位\n"]
   result_data.each.with_index(1) do |data, n|
     contents << "#{n}位　:#{data[0]}:は#{data[1]}回です\n"
   end
