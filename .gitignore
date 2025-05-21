@@ -1,2 +1,8 @@
 # dotenv
 .env
+
+# 生成されたテキストファイル
+emoji_ranking_*.txt
+
+# macOS 関連
+.DS_Store
